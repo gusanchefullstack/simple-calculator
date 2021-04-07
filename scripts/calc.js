@@ -15,7 +15,7 @@ function displayResult(textResult) {
     display.textContent = textResult;
 }
 function formatResult(result){
-    console.log(result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    return result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     
 }
 
