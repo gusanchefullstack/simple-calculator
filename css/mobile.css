@@ -1,0 +1,112 @@
+:root{
+    --calculator-border: hsl(120, 100%, 61%);
+    --calc-digits-background: hsl(240, 65%, 45%);
+    --calc-digits-font: hsl(0, 0%, 99%);
+    --calc-display-font:hsl(240, 18%, 28%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Recursive', sans-serif;
+    font-size: 20px;   
+    text-align: center;
+    background-color: lavender;
+}
+
+main {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+h1 {
+    margin-top: 50px;
+}
+h2 {
+    margin-bottom: 100px;
+}
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 2px;
+    background-color: var(--calculator-border);
+    border-left: 1px solid hsl(240, 65%, 45%);
+    border-right: 1px solid hsl(240, 65%, 45%);
+    border-bottom: 1px solid hsl(240, 65%, 45%);
+}
+.display {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    background-color: gainsboro;
+    color: var(--calc-display-font);
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 10px 10px 0;
+    border-bottom: 1px solid hsl(240, 65%, 45%);
+    border-top: 1px solid hsl(240, 65%, 45%);
+}
+.division {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+.multiplication {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+}
+.difference {
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
+}
+.addition {
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
+}
+.equal {
+    grid-row: 6 / 7;
+    grid-column: 4 / 5;
+}
+.ce {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.clear {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.backspace {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+.number-key {
+    background-color: var(--calc-digits-background);
+    color: var(--calc-digits-font);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.math-operation, .calc-functions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calc-functions {
+    background-color: hsla(223, 9%, 46%, 0.836);;
+    color: hsl(48, 100%, 93%);
+}
+.math-operation{
+    background-color: rebeccapurple;
+    color: hsl(48, 100%, 93%);
+}
