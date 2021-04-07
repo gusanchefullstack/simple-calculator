@@ -20,14 +20,16 @@ main {
     width: 90%;
     text-align: center;
     margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 h1 {
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 30px;
 }
 h2 {
     margin-bottom: 100px;
+    font-size: 20px;
 }
 .calculator {
     display: grid;
@@ -38,6 +40,7 @@ h2 {
     border-left: 1px solid hsl(240, 65%, 45%);
     border-right: 1px solid hsl(240, 65%, 45%);
     border-bottom: 1px solid hsl(240, 65%, 45%);
+    max-width: 100%;
 }
 .display {
     grid-row: 1 / 2;
@@ -109,4 +112,7 @@ h2 {
 .math-operation{
     background-color: rebeccapurple;
     color: hsl(48, 100%, 93%);
+}
+.attribution p {
+    font-size: 12px;
 }

@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="./css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="screen and (min-width: 480px) and (max-width:1023px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/laptop.css"
+      media="screen and (min-width:1024px)"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/32f374c92f.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/32f374c92f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main>
@@ -33,19 +46,34 @@
         <div class="number-key zero"><p>0</p></div>
         <div class="number-key dot"><p>.</p></div>
 
-        <div class="math-operation division"><span><i class="fas fa-divide"></i></span></div>
-        <div class="math-operation multiplication"><span><i class="fas fa-times"></i></span></div>
-        <div class="math-operation difference"><span><i class="fas fa-minus"></i></span></div>
-        <div class="math-operation addition"><span><i class="fas fa-plus"></i></span></div>
-        <div class="math-operation equal"><span><i class="fas fa-equals"></i></span></div>
+        <div class="math-operation division">
+          <span><i class="fas fa-divide"></i></span>
+        </div>
+        <div class="math-operation multiplication">
+          <span><i class="fas fa-times"></i></span>
+        </div>
+        <div class="math-operation difference">
+          <span><i class="fas fa-minus"></i></span>
+        </div>
+        <div class="math-operation addition">
+          <span><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="math-operation equal">
+          <span><i class="fas fa-equals"></i></span>
+        </div>
 
         <div class="calc-functions ce"><span>CE</span></div>
         <div class="calc-functions clear"><span>C</span></div>
-        <div class="calc-functions backspace"><span><i class="fas fa-backspace"></i></span></div>
+        <div class="calc-functions backspace">
+          <span><i class="fas fa-backspace"></i></span>
+        </div>
       </div>
     </main>
     <div class="attribution">
-      <p>Developed by <a href="https:blog.gusanche.dev" target="_blank">gusanche.dev</a></p>
+      <p>
+        Developed by
+        <a href="https:blog.gusanche.dev" target="_blank">gusanche.dev</a>
+      </p>
     </div>
   </body>
 </html>
