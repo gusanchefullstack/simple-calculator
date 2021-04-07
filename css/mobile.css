@@ -106,12 +106,21 @@ h2 {
     align-items: center;
 }
 .calc-functions {
-    background-color: hsla(223, 9%, 46%, 0.836);;
+    background-color: hsla(223, 9%, 46%, 0.836);
     color: hsl(48, 100%, 93%);
 }
 .math-operation{
     background-color: rebeccapurple;
     color: hsl(48, 100%, 93%);
+}
+.number-key:hover {
+    background-color: hsl(240, 65%, 60%);
+}
+.math-operation:hover {
+    background-color: hsl(270, 50%, 60%);
+}
+.calc-functions:hover {
+    background-color: hsla(223, 9%, 46%, 0.65);
 }
 .attribution p {
     font-size: 12px;
