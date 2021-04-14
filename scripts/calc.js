@@ -1,5 +1,5 @@
 function add(x, y) {
-  return x + y;
+  return x + y
 }
 function substraction(x, y) {
   return x - y;
@@ -15,7 +15,8 @@ function displayResult(textResult) {
   display.textContent = textResult;
 }
 function formatResult(result) {
-  return result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+    return new Intl.NumberFormat('en-US', { maximumSignificantDigits: 15 }).format(result);
 }
 
 let currentOperator = "";
