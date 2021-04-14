@@ -25,6 +25,7 @@
       src="https://kit.fontawesome.com/32f374c92f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/calc.js" defer></script>
   </head>
   <body>
     <main>
@@ -46,25 +47,25 @@
         <div class="number-key zero"><p>0</p></div>
         <div class="number-key dot"><p>.</p></div>
 
-        <div class="math-operation division">
+        <div class="math-operation division" id="division">
           <span><i class="fas fa-divide"></i></span>
         </div>
-        <div class="math-operation multiplication">
+        <div class="math-operation multiplication" id="multiplication">
           <span><i class="fas fa-times"></i></span>
         </div>
-        <div class="math-operation difference">
+        <div class="math-operation difference" id="difference">
           <span><i class="fas fa-minus"></i></span>
         </div>
-        <div class="math-operation addition">
+        <div class="math-operation addition" id="addition">
           <span><i class="fas fa-plus"></i></span>
         </div>
-        <div class="math-operation equal">
+        <div class="math-operation equal" id="equal">
           <span><i class="fas fa-equals"></i></span>
         </div>
 
-        <div class="calc-functions ce"><span>CE</span></div>
-        <div class="calc-functions clear"><span>C</span></div>
-        <div class="calc-functions backspace">
+        <div class="calc-functions ce" id="ce"><span>CE</span></div>
+        <div class="calc-functions clear" id="clear"><span>C</span></div>
+        <div class="calc-functions backspace" id="backspace">
           <span><i class="fas fa-backspace"></i></span>
         </div>
       </div>
@@ -75,6 +76,6 @@
         <a href="https:blog.gusanche.dev" target="_blank">gusanche.dev</a>
       </p>
     </div>
-    <script src="./scripts/calc.js"></script>
+    
   </body>
 </html>
