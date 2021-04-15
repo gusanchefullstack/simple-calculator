@@ -1,6 +1,6 @@
 :root{
     --calculator-border: hsl(120, 100%, 61%);
-    --calc-digits-background: hsl(240, 65%, 45%);
+    --calc-digits-background: hsl(240, 65%, 60%);
     --calc-digits-font: hsl(0, 0%, 99%);
     --calc-display-font:hsl(240, 18%, 28%);
 }
@@ -110,17 +110,26 @@ h2 {
     color: hsl(48, 100%, 93%);
 }
 .math-operation{
-    background-color: rebeccapurple;
+    background-color: hsl(270, 50%, 50%);
     color: hsl(48, 100%, 93%);
 }
 .number-key:hover {
-    background-color: hsl(240, 65%, 60%);
+    background-color: hsl(240, 65%, 70%);
+}
+.number-key:active {
+    background-color: hsl(240, 65%, 40%);
 }
 .math-operation:hover {
-    background-color: hsl(270, 50%, 60%);
+    background-color: hsl(270, 50%, 65%);
+}
+.math-operation:active {
+    background-color: hsl(270, 50%, 35%);
 }
 .calc-functions:hover {
     background-color: hsla(223, 9%, 46%, 0.65);
+}
+.calc-functions:active {
+    background-color: hsla(223, 9%, 46%, 0.35);
 }
 .attribution p {
     font-size: 12px;
