@@ -191,10 +191,18 @@ function captureClear() {
 function captureBackspace() {
   let backSpaceKey = document.getElementById("backspace");
   backSpaceKey.addEventListener("click", (event) => {
-    if(stringA && stringB){
-      stringB = "0";
-      displayResult(stringB);
-    }operand = ""
+    console.log("Backspace");
+    if (operand !== "") {
+      if (operand == stringA) {
+        operand = operand.slice(0, operand.length - 1);
+        displayResult(formatResult(operand));
+        stringA = operand;
+      } else if (operand == stringB) {
+        operand = operand.slice(0, operand.length - 1);
+        displayResult(formatResult(operand));
+        stringB = operand;
+      }
+    }
   });
 }
 
