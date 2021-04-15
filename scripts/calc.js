@@ -164,6 +164,9 @@ function captureCE() {
     console.log("CE");
     displayResult(formatResult("0"));
     operand = "";
+    if(currentOperator === "="){
+      clearAll();
+    }
     if (currentOperator !== "") {
       stringB = "";
     } else {
@@ -175,19 +178,23 @@ function captureCE() {
 function captureClear() {
   let clearKey = document.getElementById("clear");
   clearKey.addEventListener("click", (event) => {
-    console.log("Clear");
-    console.clear();
-    displayResult(formatResult("0"));
-    currentOperator = "";
-    operand = "";
-    stringA = "";
-    stringB = "";
-    previousOperator = currentOperator;
-    console.log(
-      `Current Operator: ${currentOperator}, Previous Operator: ${previousOperator}`
-    );
+    clearAll();
   });
 }
+function clearAll() {
+  console.log("Clear");
+  console.clear();
+  displayResult(formatResult("0"));
+  currentOperator = "";
+  operand = "";
+  stringA = "";
+  stringB = "";
+  previousOperator = currentOperator;
+  console.log(
+    `Current Operator: ${currentOperator}, Previous Operator: ${previousOperator}`
+  );
+}
+
 function captureBackspace() {
   let backSpaceKey = document.getElementById("backspace");
   backSpaceKey.addEventListener("click", (event) => {
