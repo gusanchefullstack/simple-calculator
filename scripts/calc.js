@@ -28,7 +28,7 @@ let stringA = "";
 let stringB = "";
 
 function captureOperand() {
-  let htmlCollection = document.getElementsByClassName("number-key");
+  let htmlCollection = document.getElementsByClassName("digit");
   let keyDigits = [...htmlCollection];
   console.log(keyDigits);
   keyDigits.forEach((element) => {
@@ -134,6 +134,7 @@ function captureEqual() {
       `Current Operator: ${currentOperator}, Previous Operator: ${previousOperator}`
     );
     previousOperator = currentOperator;
+    operand= stringA;
   });
 }
 function calculateResult() {
@@ -164,7 +165,7 @@ function captureCE() {
     console.log("CE");
     displayResult(formatResult("0"));
     operand = "";
-    if(currentOperator === "="){
+    if (currentOperator === "=") {
       clearAll();
     }
     if (currentOperator !== "") {
@@ -213,6 +214,46 @@ function captureBackspace() {
   });
 }
 
+function captureNegate() {
+  let negate = document.getElementById("sign");
+  negate.addEventListener("click", (event) => {
+    console.log("Negate");
+    if(currentOperator === "="){
+      if(operand.startsWith("-")){
+        operand = operand.replace("-","");
+      }
+      else {
+        operand = "-"+ operand;
+      }
+     
+      stringA = operand;
+      displayResult(formatResult(operand));
+    }
+    else if(stringA && stringB){
+      if(operand.startsWith("-")){
+        operand = operand.replace("-","");
+      }
+      else {
+        operand = "-"+ operand;
+      }
+     
+      stringB= operand;
+      displayResult(formatResult(operand));
+    }
+    else {
+      if(operand.startsWith("-")){
+        operand = operand.replace("-","");
+      }
+      else {
+        operand = "-"+ operand;
+      }
+     
+      stringA= operand;
+      displayResult(formatResult(operand));
+    }
+  });
+}
+
 captureOperand();
 captureAddition();
 captureSubstraction();
@@ -222,3 +263,4 @@ captureEqual();
 captureCE();
 captureClear();
 captureBackspace();
+captureNegate();
